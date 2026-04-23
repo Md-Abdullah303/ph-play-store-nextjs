@@ -12,8 +12,8 @@ const Navber = () => {
     <nav className="sticky top-0 z-40 w-full shadow-sm border-gray-400 py-5 bg-background/70 backdrop-blur-lg ">
       <header className="flex container mx-auto items-center justify-between px-6">
         <div className="flex items-center gap-3">
-            <Image src={Logo} width={25} height={25} alt="nav logo img" />
-          <p className="font-bold">HERO .IO</p>
+            <Image src={Logo} className="w-10" alt="nav logo img" />
+          <p className="font-bold text-xl sm:text-3xl primary-linear-color text-transparent bg-clip-text">HERO .IO</p>
         </div>
         <ul className="flex items-center gap-4">
           <li>
