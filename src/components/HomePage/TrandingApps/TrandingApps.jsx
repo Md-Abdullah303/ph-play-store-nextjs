@@ -1,10 +1,10 @@
 "use client";
-import MyApps from "@/hooks/MyApps";
+import useMyApps from "@/hooks/MyApps";
 import HomePageAppCard from "@/UI/HomePageAppCard/HomePageAppCard";
 import React from "react";
 
 const TrandingApps = () => {
-  const { myAllApps, spinner } = MyApps();
+  const { myAllApps, spinner } = useMyApps();
   console.log(myAllApps, spinner);
 
   return (
@@ -20,16 +20,10 @@ const TrandingApps = () => {
           blanditiis!
         </p>
       </div>
-
-      {/* {spinner ? (
-        "loding..."
-      ) : ( */}
-        <div className="">
-          {myAllApps.map((app, ind) => (
-            <HomePageAppCard key={ind} app={app} />
-          ))}
-        </div>
-      {/* )} */}
+      <h1>Apps : {`${spinner && myAllApps.length}`}</h1>
+        {
+            spinner ? 'loding,,..' : "data astase"
+        }
     </div>
   );
 };
