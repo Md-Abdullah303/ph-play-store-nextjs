@@ -2,6 +2,7 @@
 import useMyApps from "@/hooks/MyApps";
 import HomePageAppCard from "@/UI/HomePageAppCard/HomePageAppCard";
 import React from "react";
+import { HashLoader } from "react-spinners";
 
 const TrandingApps = () => {
   const { myAllApps, spinner } = useMyApps();
@@ -20,9 +21,14 @@ const TrandingApps = () => {
           blanditiis!
         </p>
       </div>
-      <h1>Apps : {`${spinner && myAllApps.length}`}</h1>
+      <h1>Apps : {`${spinner ? "loading..." : myAllApps.length}`}</h1>
         {
-            spinner ? 'loding,,..' : "data astase"
+            spinner ? <div className="flex justify-center items-center h-80"><span className="loading loading-ring loading-xl"></span></div> : 
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+              {
+                myAllApps.slice(0,8).map((app, ind)=> <HomePageAppCard key={ind} app={app}></HomePageAppCard>)
+              }
+            </div>
         }
     </div>
   );
