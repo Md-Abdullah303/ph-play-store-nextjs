@@ -9,8 +9,8 @@ const TrandingApps = () => {
   console.log(myAllApps, spinner);
 
   return (
-    <div className="w-[70%] sm:container mx-auto">
-      <div className="w-[50%] sm:w-[70%] mx-auto py-20 text-center">
+    <div className="w-[90%] sm:container mx-auto">
+      <div className="sm:w-[50%] w-full mx-auto py-20 text-center">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5">
           Tending Apps
         </h1>
