@@ -1,6 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-
 
 /***
  * companyName:"Duolingo"
@@ -18,16 +18,18 @@ title:
 const HomePageAppCard = ({ app }) => {
   console.log(app);
   return (
-    <div>
+    <Link href={`/apps/${app.id}`}>
       <div className="card bg-base-100 shadow-sm">
-        <figure>
-          {/* <Image className="" src={app.image} alt={'app img'}></Image> */}
+        <figure className=" w-full">
+          <img
+            className="w-40 h-40 flex justify-center items-center "
+            src={app.image}
+            alt="app img"
+          />
+          {/* <Image className="" src={app.image} alt={'app img'} width={500} height={500}></Image> */}
         </figure>
-          <div className="h-40 bg-blue-300  rounded-lg shadow-sm"></div>
         <div className="card-body">
-          <h2 className="card-title">
-            {app.companyName}
-          </h2>
+          <h2 className="card-title">{app.companyName}</h2>
           <div className="flex items-center justify-between">
             <div className="border border-green-600 bg-green-200 py-1 px-2 rounded-lg text-green-600">
               <p>{app.downloads}</p>
@@ -38,7 +40,7 @@ const HomePageAppCard = ({ app }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
