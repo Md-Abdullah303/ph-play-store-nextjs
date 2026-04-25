@@ -16,7 +16,7 @@ title:
  */
 
 const HomePageAppCard = ({ app }) => {
-  console.log(app);
+  // console.log(app);
   return (
     <Link href={`/apps/${app.id}`}>
       <div className="card bg-base-100 shadow-sm">

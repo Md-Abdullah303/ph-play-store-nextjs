@@ -1,8 +1,8 @@
+"use client";
 import AllAppsContainer from "@/components/AppsPage/AllAppsContainer/AllAppsContainer";
 import React from "react";
 
 const AppsPage = () => {
-    
   return (
     <div className="w-[70%] sm:container mx-auto">
       <div className="text-center space-y-3 py-10">
@@ -12,7 +12,7 @@ const AppsPage = () => {
         </p>
       </div>
 
-        <AllAppsContainer></AllAppsContainer>
+      <AllAppsContainer></AllAppsContainer>
     </div>
   );
 };

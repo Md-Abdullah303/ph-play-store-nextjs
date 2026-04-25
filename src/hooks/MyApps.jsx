@@ -10,7 +10,7 @@ const useMyApps = () => {
       try {
         const res = await fetch("/data.json");
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         setMyAllApps(data);
       } catch (e) {
         console.log("error:", e);
