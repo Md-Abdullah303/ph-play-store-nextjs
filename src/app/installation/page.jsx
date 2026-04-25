@@ -1,4 +1,5 @@
 'use client'
+import NoAppFound from "@/components/AppsPage/NoAppFound/NoAppFound";
 import { InstalledAppContext } from "@/context/InstallAppProvider/InstallAppProvider";
 import { use, useContext } from "react";
 
@@ -17,7 +18,7 @@ const InstallationPage = () => {
                 <div className="">
                     {
                         installApp.length === 0 ? 
-                        "no data" :
+                        <NoAppFound></NoAppFound> :
                         "data dekhaitasi"
                     }
                 </div>
